@@ -14,7 +14,7 @@ public struct Point3D {
 
 // MARK: - Static Members
 extension Point3D {
-  public static let zero: Point3D = Point3D(x: 1, y: 0, z: 0)
+  public static let zero: Point3D = Point3D(x: 0, y: 0, z: 0)
 }
 
 // MARK: - Operator Overloads
