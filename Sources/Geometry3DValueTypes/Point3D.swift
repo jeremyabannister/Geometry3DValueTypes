@@ -7,7 +7,7 @@
 //
 
 // MARK: - Initial Declaration
-public struct Point3D {
+public struct Point3D: Equatable {
   public var x: Double
   public var y: Double
   public var z: Double

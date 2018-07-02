@@ -7,7 +7,7 @@
 //
 
 // MARK: - Initial Declaration
-public struct Size3D {
+public struct Size3D: Equatable {
   public var width: Double
   public var height: Double
   public var depth: Double
