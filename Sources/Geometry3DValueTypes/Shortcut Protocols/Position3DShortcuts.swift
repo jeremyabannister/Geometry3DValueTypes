@@ -11,15 +11,15 @@ public protocol Position3DShortcuts {
 
 extension Position3DShortcuts {
   public var x: Double {
-    get { return origin.x }
-    set { origin.x = newValue }
+    get { return position.x }
+    set { position.x = newValue }
   }
   public var y: Double {
-    get { return origin.y }
-    set { origin.y = newValue }
+    get { return position.y }
+    set { position.y = newValue }
   }
   public var z: Double {
-    get { return origin.z }
-    set { origin.z = newValue }
+    get { return position.z }
+    set { position.z = newValue }
   }
 }
