@@ -11,6 +11,12 @@ public struct Size3D {
   public var width: Double
   public var height: Double
   public var depth: Double
+  
+  public init (width: Double, height: Double, depth: Double) {
+    self.width = width
+    self.height = height
+    self.depth = depth
+  }
 }
 
 // MARK: - Static Members
