@@ -1,15 +1,15 @@
 //
-//  Point3DShortcuts.swift
+//  Position3DShortcuts.swift
 //  Geometry3DValueTypes
 //
 //  Created by Jeremy Bannister on 7/1/18.
 //
 
-public protocol Origin3DShortcuts {
-  var origin: Point3D { get set }
+public protocol Position3DShortcuts {
+  var position: Position3D { get set }
 }
 
-extension Origin3DShortcuts {
+extension Position3DShortcuts {
   public var x: Double {
     get { return origin.x }
     set { origin.x = newValue }
