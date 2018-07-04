@@ -17,19 +17,36 @@ public struct Position3D: Equatable {
     self.y = y
     self.z = z
   }
+  
+  public init (_ x: Double, _ y: Double, _ z: Double) {
+    self.init(x: x, y: y, z: z)
+  }
 }
 
 // MARK: - Static Members
 extension Position3D {
-  public static let zero: Position3D = Position3D(x: 0, y: 0, z: 0)
+  public static let zero: Position3D = .init(0, 0, 0)
+}
+
+// MARK: - Vector3D Typealias
+public typealias Vector3D = Position3D
+
+// MARK: - Translation
+extension Position3D {
+  func translated (by position: Vector3D) -> Position3D { // <-- Overload Funnel
+    return self + position
+  }
+  func translated (by x: Double, _ y: Double, _ z: Double) -> Position3D {
+    return translated(by: Vector3D(x, y, z))
+  }
 }
 
 // MARK: - Operator Overloads
 extension Position3D {
   public static func + (lhs: Position3D, rhs: Position3D) -> Position3D {
-    return Position3D(x: lhs.x + rhs.x, y: lhs.y + rhs.y, z: lhs.z + rhs.z)
+    return Position3D(lhs.x + rhs.x, lhs.y + rhs.y, lhs.z + rhs.z)
   }
   public static func - (lhs: Position3D, rhs: Position3D) -> Position3D {
-    return Position3D(x: lhs.x - rhs.x, y: lhs.y - rhs.y, z: lhs.z - rhs.z)
+    return Position3D(lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z)
   }
 }
