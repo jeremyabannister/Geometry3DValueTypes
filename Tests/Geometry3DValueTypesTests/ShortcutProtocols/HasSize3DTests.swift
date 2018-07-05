@@ -1,7 +1,7 @@
 import XCTest
 @testable import Geometry3DValueTypes
 
-final class Size3DShortcutsTests: XCTestCase {
+final class HasSize3DTests: XCTestCase {
   func test_getWidth () {
     let testValue = StructWithSize(size: .init(width: 1, height: 2, depth: 3))
     XCTAssert(testValue.width == 1)
@@ -33,7 +33,7 @@ final class Size3DShortcutsTests: XCTestCase {
   }
 }
 
-private struct StructWithSize: Size3DShortcuts {
+private struct StructWithSize: HasSize3D {
   var size: Size3D
 }
 

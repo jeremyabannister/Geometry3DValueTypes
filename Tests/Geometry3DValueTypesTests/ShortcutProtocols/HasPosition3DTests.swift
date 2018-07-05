@@ -1,7 +1,7 @@
 import XCTest
 @testable import Geometry3DValueTypes
 
-final class Position3DShortcutsTests: XCTestCase {
+final class HasPosition3DTests: XCTestCase {
   func test_getX () {
     let testValue = StructWithPosition(position: .init(1, 2, 3))
     XCTAssert(testValue.x == 1)
@@ -33,7 +33,7 @@ final class Position3DShortcutsTests: XCTestCase {
   }
 }
 
-private struct StructWithPosition: Position3DShortcuts {
+private struct StructWithPosition: HasPosition3D {
   var position: Position3D
 }
 

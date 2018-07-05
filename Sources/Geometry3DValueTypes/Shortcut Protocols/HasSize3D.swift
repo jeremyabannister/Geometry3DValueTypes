@@ -1,15 +1,15 @@
 //
-//  Size3DShortcuts.swift
+//  HasSize3D.swift
 //  Geometry3DValueTypes
 //
 //  Created by Jeremy Bannister on 7/1/18.
 //
 
-public protocol Size3DShortcuts {
+public protocol HasSize3D {
   var size: Size3D { get set }
 }
 
-extension Size3DShortcuts {
+extension HasSize3D {
   public var width: Double {
     get { return size.width }
     set { size.width = newValue }

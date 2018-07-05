@@ -1,15 +1,15 @@
 //
-//  Position3DShortcuts.swift
+//  HasPosition3D.swift
 //  Geometry3DValueTypes
 //
 //  Created by Jeremy Bannister on 7/1/18.
 //
 
-public protocol Position3DShortcuts {
+public protocol HasPosition3D {
   var position: Position3D { get set }
 }
 
-extension Position3DShortcuts {
+extension HasPosition3D {
   public var x: Double {
     get { return position.x }
     set { position.x = newValue }
