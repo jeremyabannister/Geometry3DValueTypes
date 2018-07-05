@@ -33,11 +33,24 @@ public typealias Vector3D = Position3D
 
 // MARK: - Translation
 extension Position3D {
-  func translated (by position: Vector3D) -> Position3D { // <-- Overload Funnel
+  public func translated (by position: Vector3D) -> Position3D { // <-- Overload Funnel
     return self + position
   }
-  func translated (by x: Double, _ y: Double, _ z: Double) -> Position3D {
+  public func translated (by x: Double, _ y: Double, _ z: Double) -> Position3D {
     return translated(by: Vector3D(x, y, z))
+  }
+}
+
+//MARK: - Value Substitution
+extension Position3D {
+  public func with (x: Double) -> Position3D {
+    return Position3D(x: x, y: self.y, z: self.z)
+  }
+  public func with (y: Double) -> Position3D {
+    return Position3D(x: self.x, y: y, z: self.z)
+  }
+  public func with (z: Double) -> Position3D {
+    return Position3D(x: self.x, y: self.y, z: z)
   }
 }
 
